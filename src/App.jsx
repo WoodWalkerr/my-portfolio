@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ColorGenerator from "./components/projects/ColorGenerator";
-import IncrementNumber from "./components/projects/IncrementNumber";
+import ColorGenerator from "./projects/ColorGenerator";
+import IncrementNumber from "./projects/IncrementNumber";
 import Dashboard from "./common/Dashboard";
 import Projects from "./components/Projects";
-import HashPassword from "./components/projects/HashPassword";
-import SimpleTypeTracker from "./components/projects/SimpleTypeTracker";
+import HashPassword from "./projects/HashPassword";
+import SimpleTypeTracker from "./projects/SimpleTypeTracker";
 
 function App() {
   return (

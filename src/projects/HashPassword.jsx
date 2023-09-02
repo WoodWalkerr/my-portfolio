@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import bcrypt from "bcryptjs";
-import Toggle from "../../themeTemp/toggle";
-import { IoIosArrowBack } from "../../icons/icons";
+import Toggle from "../themeTemp/toggle";
+import { IoIosArrowBack } from "../icons/icons";
 import { useNavigate } from "react-router-dom";
 
 function HashPassword() {

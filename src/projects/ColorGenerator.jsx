@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Toggle from "../../themeTemp/toggle";
-import { IoIosArrowBack } from "../../icons/icons";
+import Toggle from "../themeTemp/toggle";
+import { IoIosArrowBack } from "../icons/icons";
 import { useNavigate } from "react-router-dom";
 
 function ColorGenerator() {

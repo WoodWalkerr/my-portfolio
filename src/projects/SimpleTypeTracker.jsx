@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
-import Toggle from "../../themeTemp/toggle";
-import { IoIosArrowBack } from "../../icons/icons";
+import Toggle from "../themeTemp/toggle";
+import { IoIosArrowBack } from "../icons/icons";
 import { useNavigate } from "react-router-dom";
 
 function SimpleTypeTracker() {
