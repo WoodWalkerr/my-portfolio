@@ -13,9 +13,6 @@ const Contact = () => {
   const PUBLIC_KEY = '475dUTU2teTf8fxII'
 
 
-  console.log(SERVICE_ID)
-  console.log(TEMP_ID)
-
   const sendEmail = (e) => {
     e.preventDefault();
 
