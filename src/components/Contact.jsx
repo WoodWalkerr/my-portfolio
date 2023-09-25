@@ -52,6 +52,7 @@ const Contact = () => {
           </label>
           <input
             type="text"
+            id="user_name"
             name="user_name"
             className="border-gray-300 text-gray-900 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 block w-full sm:text-sm border mt-2"
           />
@@ -64,6 +65,7 @@ const Contact = () => {
           </label>
           <input
             type="email"
+            id="user_email"
             name="user_email"
             className="border-gray-300 text-gray-900  rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 block w-full sm:text-sm border"
           />
@@ -76,6 +78,7 @@ const Contact = () => {
           </label>
           <textarea
             name="message"
+            id="message"
             className="border-gray-300 text-gray-900  rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 block w-full sm:text-sm border"
             rows="5"
           />

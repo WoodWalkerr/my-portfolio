@@ -1,6 +1,6 @@
 import colorGen from "../assets/images/hex.PNG";
 import counter from "../assets/images/counter.PNG";
-import hashPass from "../assets/images/hash.PNG";
+// import hashPass from "../assets/images/hash.PNG";
 import typeTracker from "../assets/images/type-track.PNG";
 import grocBuddy from "../assets/images/grocerybuddy.JPG";
 import calcutator from '../assets/images/calculator.JPG'
@@ -17,11 +17,11 @@ export const projects = [
     path: "/number-incrementor",
     img: counter,
   },
-  {
-    title: "Hash Password",
-    path: "/hash-password",
-    img: hashPass,
-  },
+  // {
+  //   title: "Hash Password",
+  //   path: "/hash-password",
+  //   img: hashPass,
+  // },
   {
     title: "Type Tracker",
     path: "/type-tracker",

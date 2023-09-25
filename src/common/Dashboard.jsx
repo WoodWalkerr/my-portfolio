@@ -1,7 +1,7 @@
 import Splash from "../components/Splash";
 import Projects from "../components/FeaturedProjects";
 import About from "../components/About";
-import AboutSkills from "../components/Services";
+import Services from "../components/Services";
 import Skills from "../components/Skills";
 import Experiences from "../components/Experiences";
 import Contact from "../components/Contact";
@@ -17,7 +17,7 @@ function Dashboard() {
         <Splash />
         <Projects />
         <About />
-        <AboutSkills />
+        <Services />
         <Skills />
         <Experiences />
         <Contact />

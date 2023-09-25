@@ -6,7 +6,7 @@ import dtGIF from "../assets/images/database.gif";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const AboutSkills = () => {
+const Services = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -77,9 +77,9 @@ const AboutSkills = () => {
           <div className="flex flex-col items-start justify-start pl-5 md:pl-0 font-light">
             <h1 className="flex justify-center items-center text-xl md:text-2xl font-bold text-black dark:text-white relative">
 
-              <h1 className="text-lg mr-2 font-extrabold text-black dark:text-white">
+              <p className="text-lg mr-2 font-extrabold text-black dark:text-white">
                 &lt;/&gt;
-              </h1>
+              </p>
               Back-end Programming
             </h1>
             <p className="text-black dark:text-white">
@@ -140,4 +140,4 @@ const AboutSkills = () => {
   );
 };
 
-export default AboutSkills;
+export default Services;
