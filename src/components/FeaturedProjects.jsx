@@ -10,7 +10,7 @@ const FeaturedProjects = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl h-screen mx-auto p-4 py-20 sm:px-5">
+    <div className="max-w-6xl h-screen mx-auto p-4 py-20 sm:px-5 overflow-auto">
       <h2 className="text-4xl md:text-4xl font-medium text-gray-300 dark:text-white pb-4 mb-2 md:mb-16 text-center md:text-left md:pb-0"
             data-aos="fade-right"
             data-aos-delay="200"
