@@ -13,7 +13,7 @@ export const projects = [
     title: 'Educator',
     description: 'is a student management application focused on data management and student success optimization, including attendance and learning performance.',
     image: proj2,
-    techStack: ['React', 'Tailwind', 'PostgreSQL', 'Express', 'Node.js'],
+    techStack: ['React', 'CSS', 'PostgreSQL', 'Express', 'Node.js'],
     link: "https://github.com/chingu-voyages/v45-tier3-team-31"
   },
 ];
