@@ -18,10 +18,11 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto w-full sm:px-4  ">
         <div className="flex justify-between items-center">
           <div className="text-start mr-auto">
-            <button className="text-2xl ml-3 font-extrabold py-6 text-black dark:text-white bg-clip-text"
-            >
-              MELVEN.
-            </button>
+            <Link spy={true} smooth={true} duration={500} to="Home">
+              <button className="text-2xl ml-3 font-extrabold py-6 text-black dark:text-white bg-clip-text">
+                MELVEN.
+              </button>
+            </Link>
           </div>
 
           <ul className="hidden md:flex">
@@ -56,7 +57,8 @@ const Navbar = () => {
             <ul className="flex flex-col absolute top-0 left-0 w-full h-screen bg-white dark:bg-black text-black dark:text-white ">
               <div className="text-start mr-auto">
                 <span className="text-2xl ml-3 font-extrabold px-4 md:px-12 py-6 text-white dark:text-black bg-clip-text">
-                  MELVEN.</span>
+                  MELVEN.
+                </span>
               </div>
               {links.map(({ id, link }) => (
                 <li
