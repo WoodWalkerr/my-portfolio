@@ -18,7 +18,7 @@ const Splash = () => {
   return (
     <div
       className="h-screen w-full max-w-6xl mx-auto p-5 py-20"
-      id="Home"
+      name="Home"
     >
       <div className="container mx-auto flex flex-col md:flex-row py-20 md:py-20 px-4 md:px-8 items-center"
            data-aos="fade-down"
