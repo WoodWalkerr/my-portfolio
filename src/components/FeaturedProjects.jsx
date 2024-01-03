@@ -14,7 +14,7 @@ const FeaturedProjects = () => {
       <h2 className="text-4xl md:text-4xl font-medium text-gray-300 dark:text-white pb-4 mb-2 md:mb-16 text-center md:text-left md:pb-0"
             data-aos="fade-right"
             data-aos-delay="200"
-      >Featured Project</h2>
+      >Featured Projects</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8"
             data-aos="fade-right"

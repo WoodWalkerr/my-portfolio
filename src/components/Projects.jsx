@@ -32,7 +32,7 @@ const Projects = () => {
             data-aos="fade-right"
             data-aos-delay="200"
           >
-            Project
+            Projects
           </h2>
 
           <div
