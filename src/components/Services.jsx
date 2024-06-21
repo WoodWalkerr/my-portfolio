@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { FaPaintRoller, FaDatabase } from "../icons/icons";
+import { FaPaintRoller, FaDatabase, FaPhotoVideo } from "../icons/icons";
 import fGIF from "../assets/images/frontend.gif";
 import bGIT from "../assets/images/backend.gif";
 import dtGIF from "../assets/images/database.gif";
+import gtGIF from "../assets/images/videoediting.gif";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -12,7 +13,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-5 py-20" name="Services">
+    <div className="w-full max-w-6xl mx-auto p-5 py-20 relative overflow-auto" name="Services">
       <h2
         className="text-4xl md:text-4xl font-medium text-gray-300 dark:text-white pb-4 mb-12 md:mb-16 text-center md:text-left md:pb-0"
         data-aos="fade-left"
@@ -76,7 +77,6 @@ const Services = () => {
         >
           <div className="flex flex-col items-start justify-start pl-5 md:pl-0 font-light">
             <h1 className="flex justify-center items-center text-xl md:text-2xl font-bold text-black dark:text-white relative">
-
               <p className="text-lg mr-2 font-extrabold text-black dark:text-white">
                 &lt;/&gt;
               </p>
@@ -130,6 +130,40 @@ const Services = () => {
           <div className="aspect-w-3 aspect-h-2 w-full max-w-xs md:max-w-full">
             <img
               src={dtGIF}
+              alt="GIF"
+              className="object-cover rounded-lg hover:scale-105 shadow-lg shadow-offset shadow-r-lg transform transition duration-300"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          className="p-4 pl-0 sm:pl-10 flex flex-col justify-center items-start md:order-last"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <div className="flex flex-col items-start justify-start pl-5 md:pl-0 font-light">
+            <h1 className="flex justify-center items-center text-xl md:text-2xl font-bold text-black dark:text-white">
+              <FaPhotoVideo
+                size={18}
+                className="text-black dark:text-white mr-2 hover:text-gray-400 transition duration-300 ease-in-out"
+              />
+              Graphics Design & Video Editing
+            </h1>
+            <p className="text-black dark:text-white">
+              I can do Graphics Design & Video Editing.
+            </p>
+          </div>
+        </div>
+        <div
+          className="p-4 flex justify-center items-start md:order-first"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <div className="aspect-w-3 aspect-h-2 w-full max-w-xs md:max-w-full">
+            <img
+              src={gtGIF}
               alt="GIF"
               className="object-cover rounded-lg hover:scale-105 shadow-lg shadow-offset shadow-r-lg transform transition duration-300"
             />

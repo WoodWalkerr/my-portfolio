@@ -1,9 +1,17 @@
 import proj1 from "../assets/images/highground-app.PNG";
 import proj2 from "../assets/images/Educator.JPG";
 import proj3 from "../assets/images/shopEase.JPG";
+import proj4 from "../assets/images/speedrefalo.JPG";
 
 
 export const projects = [
+  {
+    title: 'SpeedRegalo',
+    description: 'Exploring a dynamic and user-friendly e-commerce website involves delving into various aspects that contribute to its effectiveness in attracting and retaining customers',
+    image: proj4,
+    techStack: ['React', 'TailwindCss', 'PostgreSQL', 'Express', 'Node.js'],
+    link: "/"
+  },
   {
     title: 'ShopEase',
     description: 'ShopEase is an e-commerce website designed for a seamless shopping experience. Explore curated fashion and lifestyle essentials, enjoy secure transactions, easy payments, and top-notch customer service.',

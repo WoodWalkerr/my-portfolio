@@ -15,7 +15,7 @@ export const skills = [
   },
 
   {
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     skill: "Tailwind CSS",
   },
   {
@@ -60,6 +60,30 @@ export const skills = [
   {
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     skill: "Expressjs",
+  },
+  {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain-wordmark.svg",
+    skill: "Trello",
+  },
+  {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
+    skill: "WordPress",
+  },
+  {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/digitalocean/digitalocean-original.svg",
+    skill: "Digital Ocean",
+  },
+  {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+    skill: "AWS",
+  },
+  {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
+    skill: "Adobe PS",
+  },
+  {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg",
+    skill: "Adobe Premier",
   },
 ];
 

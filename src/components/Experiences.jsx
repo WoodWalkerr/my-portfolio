@@ -16,13 +16,20 @@ function Experience() {
       >
         Experiences
       </p>
-      <div className="flex flex-col justify-center" data-aos="fade-up" data-aos-delay="300">
-        <div className="flex flex-wrap gap-6">
-          {experiences.map((experience, index) => (
+      <div
+        className="flex flex-col justify-center"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-6 md:mt-8">
+        {experiences.map((experience, index) => (
             <div
-              className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6 transition-all duration-300 ease-in-out transform hover:scale-105 flex flex-col justify-between"
+              className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6 mb-1 transition-all duration-300 ease-in-out transform hover:scale-105 flex flex-col justify-between"
               key={index}
             >
+              <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                {experience.company}
+              </h1>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                 {experience.title}
               </h3>

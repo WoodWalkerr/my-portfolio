@@ -1,12 +1,33 @@
 export const experiences = [
+
   {
-    title: "Frontend Developer",
+    company: "Ripple VAs",
+    title: "Virtual Assistant",
     description:
-      "Developed and implemented responsive user interfaces using HTML5, CSS3, React, Bootstrap, and Tailwind CSS. Collaborated with designers and backend developers to create visually appealing and user-friendly web applications. Ensured optimal user experience by optimizing website performance and usability. Conducted cross-browser compatibility testing and resolved frontend-related issues. Utilized version control systems like Git/Github for efficient code management.",
+      "As a Web Development Specialist at Ripple, I create responsive, user-friendly websites. My expertise includes frontend and backend development, e-commerce solutions, CMS customization, SEO optimization, and ongoing support. I collaborate closely with clients to deliver high-quality, innovative web solutions tailored to their unique needs.",
   },
   {
-    title: "Backend Developer",
+    company: "RakSquad Tech Corp Inc.",
+    title: "Software Developer",
     description:
-      "Created backend services using Node.js and Express.js, along with Sequelize ORM for database interactions. Designed and managed database schemas using MySQL and PostgreSQL. Implemented RESTful APIs for seamless communication between the frontend and backend. Wrote efficient queries to retrieve and manipulate data from databases. Worked collaboratively with frontend developers and testers to ensure smooth integration and functionality of web applications. Utilized Git/Github for version control, including repository management and code collaboration.",
+      "As an e-commerce web developer, I design, develop, and maintain backend and frontend infrastructure. I integrate third-party services and payment gateways, implement APIs and databases using frameworks like Express.js and Django. I also collaborate with cross-functional teams for seamless project delivery.",
+  },
+  {
+    company: "Chingu",
+    title: "Full-Stack Developer",
+    description:
+      "I'm a full stack developer with experience at Chingu, where I worked on frontend and backend tasks for projects. Collaborating closely with designers and developers, I honed my skills in problem-solving and teamwork, gaining valuable experience in web development.",
+  },
+  {
+    company: "StackTrek.co",
+    title: "Part-Time Trainer",
+    description:
+      "I provide expertise in Full Stack Web Development, offering training and mentoring. I conduct sessions covering programming, frameworks, and best practices, guiding implementation and troubleshooting. I also teach effective Git usage and collaborate on curriculum enhancements.",
+  },
+  {
+    company: "StackTrek.co",
+    title: "Full-Stack Bootcamp Experience",
+    description:
+      "Proficient in Python and JavaScript for functional coding, I've created responsive UIs using HTML5, CSS3, React, Bootstrap, and Tailwind CSS. I've developed backend services with Node.js, Express.js, and Sequelize ORM for RESTful APIs. Additionally, I manage MySQL and PostgreSQL databases to ensure integrity and efficiency. Skilled in Git, I handle version control, repository management, and branching strategies adeptly.",
   },
 ];
