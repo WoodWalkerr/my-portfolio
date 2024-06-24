@@ -38,7 +38,7 @@ const About = () => {
               Melven Bagolaque
             </div>
             <div className="font-light text-black dark:text-white">
-              Im a highly enthusiastic and competitive person who loves taking
+              Im a highly enthusiastic and eager to learn person who loves taking
               on new challenges and pushing my limits. I enjoy learning new
               skills and sharing my knowledge with others. I believe that being
               a jack of all trades and master of none is always better than
