@@ -1,21 +1,23 @@
 import React, { useEffect } from "react";
 import Toggle from "../themeTemp/toggle";
-import { IoIosArrowBack } from "../icons/icons";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoMdGlobe, DiGithubAlt } from "../icons/icons";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../data/featuredProjects";
-import { DiGithubAlt } from "../icons/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Projects = () => {
   const navigate = useNavigate();
+  
   useEffect(() => {
     AOS.init();
   }, []);
+  
   return (
     <div className="max-w-6xl h-screen mx-auto p-4 py-20 sm:px-5 overflow-auto">
       <div className="max-w-6xl mx-auto p-5 pb-20">
-        <div className=" flex justify-between items-center mb-10">
+        <div className="flex justify-between items-center mb-10">
           <button
             onClick={() => navigate("/")}
             className="text-white px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:transition-all hover:ease-in-out hover:scale-110"
@@ -76,10 +78,17 @@ const Projects = () => {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <DiGithubAlt
-                        size={30}
-                        className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
-                      />
+                      {project.techStack.includes("Wix") ? (
+                        <IoMdGlobe
+                          size={30}
+                          className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
+                        />
+                      ) : (
+                        <DiGithubAlt
+                          size={30}
+                          className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
+                        />
+                      )}
                     </a>
                   )}
                 </div>

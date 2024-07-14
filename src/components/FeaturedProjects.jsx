@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { projects } from "../data/featuredProjects";
-import { DiGithubAlt } from "../icons/icons";
+import { IoMdGlobe, DiGithubAlt } from "../icons/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -47,18 +47,25 @@ const FeaturedProjects = () => {
                 ))}
               </div>
               {project.link && (
-                <a
-                  href={project.link}
-                  className="text-gray-700 text-lg"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <DiGithubAlt
-                    size={30}
-                    className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
-                  />
-                </a>
-              )}
+                    <a
+                      href={project.link}
+                      className="text-gray-700 text-lg"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {project.techStack.includes("Wix") ? (
+                        <IoMdGlobe
+                          size={30}
+                          className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
+                        />
+                      ) : (
+                        <DiGithubAlt
+                          size={30}
+                          className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
+                        />
+                      )}
+                    </a>
+                  )}
             </div>
           </div>
         ))}

@@ -2,9 +2,17 @@ import proj1 from "../assets/images/highground-app.PNG";
 import proj2 from "../assets/images/Educator.JPG";
 import proj3 from "../assets/images/shopEase.JPG";
 import proj4 from "../assets/images/speedrefalo.JPG";
+import proj5 from "../assets/images/wix-website.JPG";
 
 
 export const projects = [
+  {
+    title: 'Mothers With Careers',
+    description: 'Exploring a dynamic and supportive coaching website involves delving into various aspects that empower mothers to thrive in both their careers and personal lives through tailored programs and personalized support.',
+    image: proj5,
+    techStack: ['Wix'],
+    link: "https://www.motherswithcareers.co.uk/"
+  },
   {
     title: 'SpeedRegalo',
     description: 'Exploring a dynamic and user-friendly e-commerce website involves delving into various aspects that contribute to its effectiveness in attracting and retaining customers',
