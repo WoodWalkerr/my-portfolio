@@ -47,7 +47,7 @@ const About = () => {
             <div className="flex justify-center md:justify-start mt-4">
               <button className="text-white px-6 py-1 mt-1 font-semibold rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:transition-all hover:ease-in-out hover:scale-110">
                 <a
-                  href="/Melven Bagolaque-CV.pdf"
+                  href="/MELVEN-BAGOLAQUE-RESUME.pdf"
                   rel="noreferrer"
                   target="_blank"
                   className="text-white font-semibold"

@@ -1,4 +1,5 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { projects } from "../data/featuredProjects";
 import { IoMdGlobe, DiGithubAlt } from "../icons/icons";
 import AOS from "aos";
@@ -9,16 +10,25 @@ const FeaturedProjects = () => {
     AOS.init();
   }, []);
 
+  const navigate = useNavigate()
+
+  
+
   return (
     <div className="max-w-6xl h-screen mx-auto p-4 py-20 sm:px-5 overflow-auto">
-      <h2 className="text-4xl md:text-4xl font-medium text-gray-300 dark:text-white pb-4 mb-2 md:mb-16 text-center md:text-left md:pb-0"
-            data-aos="fade-right"
-            data-aos-delay="200"
-      >Featured Projects</h2>
+      <h2
+        className="text-4xl md:text-4xl font-medium text-gray-300 dark:text-white pb-4 mb-2 md:mb-16 text-center md:text-left md:pb-0"
+        data-aos="fade-right"
+        data-aos-delay="200"
+      >
+        Featured Projects
+      </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8"
-            data-aos="fade-right"
-            data-aos-delay="300">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8"
+        data-aos="fade-right"
+        data-aos-delay="300"
+      >
         {projects.map((project, index) => (
           <div
             key={index}
@@ -35,7 +45,9 @@ const FeaturedProjects = () => {
               <h3 className="text-2xl text-black dark:text-white font-bold mb-2">
                 {project.title}
               </h3>
-              <p className="text-black dark:text-white text-sm">{project.description}</p>
+              <p className="text-black dark:text-white text-sm">
+                {project.description}
+              </p>
               <div className="mt-4">
                 {project.techStack.map((stack, stackIndex) => (
                   <div
@@ -47,30 +59,42 @@ const FeaturedProjects = () => {
                 ))}
               </div>
               {project.link && (
-                    <a
-                      href={project.link}
-                      className="text-gray-700 text-lg"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {project.techStack.includes("Wix") ? (
-                        <IoMdGlobe
-                          size={30}
-                          className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
-                        />
-                      ) : (
-                        <DiGithubAlt
-                          size={30}
-                          className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
-                        />
-                      )}
-                    </a>
+                <a
+                  href={project.link}
+                  className="text-gray-700 text-lg"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {project.techStack.includes("Wix") ||
+                  project.techStack.includes("Namesco") ? (
+                    <IoMdGlobe
+                      size={30}
+                      className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
+                    />
+                  ) : (
+                    <DiGithubAlt
+                      size={30}
+                      className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
+                    />
                   )}
+                </a>
+              )}
             </div>
           </div>
         ))}
       </div>
+      <div className="flex justify-center md:justify-start mt-4">
+            <button
+            onClick={() => navigate('/projects')}
+              className="text-white px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:transition-all hover:ease-in-out hover:scale-110"
+            >
+              View All Projects
+              <span className="group-hover:rotate-90 duration-300 ml-2"></span>
+            </button>
+          </div>
     </div>
+    
+    
   );
 };
 

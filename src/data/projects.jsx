@@ -1,0 +1,53 @@
+import proj1 from "../assets/images/highground-app.PNG";
+import proj2 from "../assets/images/Educator.JPG";
+import proj3 from "../assets/images/shopEase.JPG";
+import proj4 from "../assets/images/speedrefalo.JPG";
+import proj5 from "../assets/images/wix-website.JPG";
+import proj6 from "../assets/images/siarrah.JPG";
+
+
+export const projects = [
+  {
+    title: 'Siarah People Solutions',
+    description: 'This website offers impactful and strategic HR solutions designed to empower business owners to achieve success through their people. With a dynamic and client-focused approach, it ensures that managing your team becomes a seamless and rewarding experience, allowing you to focus on what you do best—growing your business.',
+    image: proj6,
+    techStack: ['Namesco'], 
+    link: "https://www.siarahpeoplesolutions.co.uk/"
+  },
+  {
+    title: 'Mothers With Careers',
+    description: 'Exploring a dynamic and supportive coaching website involves delving into various aspects that empower mothers to thrive in both their careers and personal lives through tailored programs and personalized support.',
+    image: proj5,
+    techStack: ['Wix'], 
+    link: "https://www.motherswithcareers.co.uk/"
+  },
+  {
+    title: 'SpeedRegalo',
+    description: 'Exploring a dynamic and user-friendly e-commerce website involves delving into various aspects that contribute to its effectiveness in attracting and retaining customers',
+    image: proj4,
+    techStack: ['React', 'TailwindCss', 'PostgreSQL', 'Express', 'Node.js'],
+    link: "/"
+  },
+  {
+    title: 'ShopEase',
+    description: 'ShopEase is an e-commerce website designed for a seamless shopping experience. Explore curated fashion and lifestyle essentials, enjoy secure transactions, easy payments, and top-notch customer service.',
+    image: proj3,
+    techStack: ['NextJs', 'TypeScript', 'Sanity', 'TailwindCss', 'Shadcn/ui'],
+    link: "https://github.com/WoodWalkerr/e-commerce-web"
+  },
+  {
+    title: 'Educator',
+    description: 'is a student management application focused on data management and student success optimization, including attendance and learning performance.',
+    image: proj2,
+    techStack: ['React', 'CSS', 'PostgreSQL', 'Express', 'Node.js'],
+    link: "https://github.com/chingu-voyages/v45-tier3-team-31"
+  },
+  {
+    title: 'Highground',
+    description: 'is an email-based management system designed specifically for scheduling visits to the beautiful Lake Maragang.',
+    image: proj1,
+    techStack: ['React', 'Tailwind', 'PostgreSQL', 'Express', 'Node.js'],
+    link: "https://github.com/WoodWalkerr/st-highground-app"
+  },
+  
+];
