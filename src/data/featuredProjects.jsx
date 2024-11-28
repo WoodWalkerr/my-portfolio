@@ -4,15 +4,33 @@ import proj3 from "../assets/images/shopEase.JPG";
 import proj4 from "../assets/images/speedrefalo.JPG";
 import proj5 from "../assets/images/wix-website.JPG";
 import proj6 from "../assets/images/siarrah.JPG";
+import proj7 from "../assets/images/joshalize.JPG";
+import proj8 from "../assets/images/Cristelle.JPG";
+import proj9 from "../assets/images/squarespace-proj.JPG";
+
 
 
 export const projects = [
   {
-    title: 'Siarah People Solutions',
-    description: 'This website offers impactful and strategic HR solutions designed to empower business owners to achieve success through their people. With a dynamic and client-focused approach, it ensures that managing your team becomes a seamless and rewarding experience, allowing you to focus on what you do best—growing your business.',
-    image: proj6,
-    techStack: ['Namesco'], 
-    link: "https://www.siarahpeoplesolutions.co.uk/"
+    title: 'Joshalieze Portfolio',
+    description: 'I designed and developed a modern, user-friendly portfolio website for a Virtual Assistant aiming to showcase their skills, services, and achievements. The website serves as a digital resume, highlighting the client’s expertise in administrative support, social media management, email handling, and other virtual assistant services',
+    image: proj7,
+    techStack: ['React', 'TailwindCss'],
+    link: "https://josha-portfolio.vercel.app/"
+  },
+  {
+    title: 'Cristelle Portfolio',
+    description: 'I designed and developed a modern, user-friendly portfolio website for a Virtual Assistant aiming to showcase their skills, services, and achievements. The website serves as a digital resume, highlighting the client’s expertise in administrative support, social media management, email handling, and other virtual assistant services',
+    image: proj8,
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://cristelle-portfolio.vercel.app/"
+  },
+  {
+    title: 'People Development Consultant',
+    description: 'I redesigned the website using Squarespace, ensuring it seamlessly aligns with the client’s branding kit and effectively meets their specific needs.',
+    image: proj9,
+    techStack: ['Squarespace'],
+    link: "https://nadineburrowes.squarespace.com/"
   },
   {
     title: 'Mothers With Careers',

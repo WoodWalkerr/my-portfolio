@@ -79,7 +79,7 @@ const Projects = () => {
                       target="_blank"
                     >
                       {project.techStack.includes("Wix") ||
-                      project.techStack.includes("Namesco") ? (
+                      project.techStack.includes("Namesco") || project.techStack.includes("Squarespace") ? (
                         <IoMdGlobe
                           size={30}
                           className="text-white dark:text-black bg-gray-800 dark:bg-white rounded-full mt-5 hover:text-gray-400 transition duration-300 ease-in-out"
