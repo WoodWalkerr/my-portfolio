@@ -7,10 +7,18 @@ import proj6 from "../assets/images/siarrah.JPG";
 import proj7 from "../assets/images/joshalize.JPG";
 import proj8 from "../assets/images/Cristelle.JPG";
 import proj9 from "../assets/images/squarespace-proj.JPG";
+import proj10 from "../assets/images/Rpms.JPG";
 
 
 
 export const projects = [
+  {
+    title: 'Project Management Tools',
+    description: 'This project is a proposed and independently developed project management tool designed to streamline task organization and boost productivity. The website empowers users to efficiently manage their tasks with intuitive features that allow for adding, editing, and updating tasks seamlessly',
+    image: proj10,
+    techStack: ['React', 'TailwindCss', 'Mongodb', 'Expressjs', 'NodeJs'],
+    link: "https://rpms-frontend-woodwalkerrs-projects.vercel.app/"
+  },
   {
     title: 'Joshalieze Portfolio',
     description: 'I designed and developed a modern, user-friendly portfolio website for a Virtual Assistant aiming to showcase their skills, services, and achievements. The website serves as a digital resume, highlighting the client’s expertise in administrative support, social media management, email handling, and other virtual assistant services',
