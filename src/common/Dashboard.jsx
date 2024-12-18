@@ -8,6 +8,8 @@ import Contact from "../components/Contact";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { ThemeProvider } from "../themeTemp/themeContext";
+import Certificates from "../components/Certificates";
+import Testimonials from "../components/Testimonials";
 
 function Dashboard() {
   return (
@@ -17,8 +19,10 @@ function Dashboard() {
         <Splash />
         <Projects />
         <About />
+        <Certificates />
         <Services />
         <Skills />
+        <Testimonials />
         <Experiences />
         <Contact />
         <Footer />
