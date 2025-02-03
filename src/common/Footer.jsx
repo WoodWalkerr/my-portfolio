@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="w-full max-w-6xl mx-auto px-4 py-20">
       <p className="text-center text-black dark:text-white p-10">
-          © 2024 Copyright Melven Bagolaque
+          © 2025 Copyright Melven Bagolaque
         </p>
       <p className="text-center text-black dark:text-white text-sm">
         <span className="font-semibold">EN:</span> This website was developed by
