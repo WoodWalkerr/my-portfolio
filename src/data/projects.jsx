@@ -8,9 +8,35 @@ import proj7 from "../assets/images/joshalize.JPG";
 import proj8 from "../assets/images/Cristelle.JPG";
 import proj9 from "../assets/images/squarespace-proj.JPG";
 import proj10 from "../assets/images/Rpms.JPG";
+import proj11 from "../assets/images/folklore.JPG";
+import proj12 from "../assets/images/drifters.JPG";
+import proj13 from "../assets/images/mimosa.JPG";
+
+
 
 
 export const projects = [
+  {
+    title: 'Mimosa Margaret River',
+    description: 'Mimosa Margaret River is a serene and stylish retreat nestled in the heart of Western Australias wine country. This website was crafted to reflect the peaceful, luxurious experience guests can expect—highlighting the retreat’s accommodations, amenities, and breathtaking natural surroundings. Built with WordPress and styled using Elementor, the site features smooth navigation and a visually calming aesthetic, with WooCommerce integration for potential bookings or purchases.',
+    image: proj13,
+    techStack: ['WordPress', 'Elementor', 'WooCommerce'],
+    link: "https://mimosamargaretriver.com.au/"
+  },
+  {
+    title: 'Drifter Cruisers',
+    description: 'This site was designed for Drifter Cruisers, a brand specializing in surf skateboards that blend street and surf culture. The website captures the essence of their laid-back, adventurous vibe while offering a seamless browsing experience. Developed on WordPress with Elementor and WooCommerce, it features an easy-to-navigate product catalog and smooth purchasing process.',
+    image: proj12,
+    techStack: ['WordPress', 'Elementor', 'WooCommerce'],
+    link: "https://driftercruisers.com/"
+  },
+  {
+    title: 'Folklore Skateboards',
+    description: 'A bold and edgy design for Folklore Skateboards, one of Australia’s iconic skateboard brands. This website puts the spotlight on their product range and skate culture identity. Built using WordPress, Elementor, and WooCommerce, it supports e-commerce capabilities and provides a highly visual, dynamic user interface tailored to skateboard enthusiasts.',
+    image: proj11,
+    techStack: ['WordPress', 'Elementor', 'WooCommerce'],
+    link: "https://folklore.com.au/"
+  },
   {
     title: 'Project Management Tools',
     description: 'This project is a proposed and independently developed project management tool designed to streamline task organization and boost productivity. The website empowers users to efficiently manage their tasks with intuitive features that allow for adding, editing, and updating tasks seamlessly',
