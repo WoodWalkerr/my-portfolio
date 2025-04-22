@@ -70,6 +70,10 @@ export const skills = [
     skill: "WordPress",
   },
   {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/woocommerce/woocommerce-original.svg",
+    skill: "WooCommerce",
+  },
+  {
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/digitalocean/digitalocean-original.svg",
     skill: "Digital Ocean",
   },
@@ -77,6 +81,11 @@ export const skills = [
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
     skill: "AWS",
   },
+  {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg",
+    skill: "Canva",
+  },
+
   {
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
     skill: "Adobe PS",
