@@ -11,11 +11,18 @@ import proj10 from "../assets/images/Rpms.JPG";
 import proj11 from "../assets/images/folklore.JPG";
 import proj12 from "../assets/images/drifters.JPG";
 import proj13 from "../assets/images/mimosa.JPG";
-
+import proj14 from "../assets/images/Capture.JPG";
 
 
 
 export const projects = [
+    {
+      title: 'Y-Knot Helmets',
+      description: 'Y-Knot Helmets is a modern, stylish website designed to showcase premium helmet products with a focus on safety, performance, and design. Built with WordPress and styled using Elementor, the site offers smooth navigation and a clean, visually striking layout that highlights the brand’s collection. WooCommerce integration provides a seamless shopping experience, making it easy for customers to explore, customize, and purchase helmets online. The design balances functionality with aesthetic appeal, ensuring the website reflects the brand’s commitment to quality and innovation.',
+      techStack: ['WordPress', 'Elementor', 'WooCommerce'],
+      image: proj14,
+      link: "https://y-not.au/"
+    },
   {
     title: 'Mimosa Margaret River',
     description: 'Mimosa Margaret River is a serene and stylish retreat nestled in the heart of Western Australias wine country. This website was crafted to reflect the peaceful, luxurious experience guests can expect—highlighting the retreat’s accommodations, amenities, and breathtaking natural surroundings. Built with WordPress and styled using Elementor, the site features smooth navigation and a visually calming aesthetic, with WooCommerce integration for potential bookings or purchases.',
