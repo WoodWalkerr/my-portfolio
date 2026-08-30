@@ -85,15 +85,15 @@ export const skills = [
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg",
     skill: "Canva",
   },
+  {
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+    skill: "Figma",
+  },
+ {
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6sXuqwb1FJ-yDhEX2w7d1GN3LxG1aanwHlb7T_6JFzw&s=10",
+    skill: "Go High Level",
+  },
 
-  {
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
-    skill: "Adobe PS",
-  },
-  {
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg",
-    skill: "Adobe Premier",
-  },
 ];
 
 

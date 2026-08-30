@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import img from "../assets/images/profile.jpg";
+import img from "../assets/images/myprofile.jpg";
 import { FaLinkedinIn, DiGithubAlt, AiFillInstagram } from "../icons/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
