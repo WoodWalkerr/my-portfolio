@@ -16,7 +16,7 @@ const Footer = () => {
       </p>
       <p className="text-center text-black dark:text-white text-sm mt-4">
         <span className="font-semibold">FIL:</span> Ang website na ito ay ginawa
-        ni Melven Bagolaque. Ito ay hindi maaaring at hindi dapat kopyahin sa
+        ni Melven Bagolaque.. Ito ay hindi maaaring at hindi dapat kopyahin sa
         anumang paraan o sa anumang anyo nang walang pahintulot mula sa kaniya.
       </p>
       <div className=" flex justify-center items-center mt-8">
