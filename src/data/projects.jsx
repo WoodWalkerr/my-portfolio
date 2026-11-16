@@ -16,13 +16,13 @@ import proj14 from "../assets/images/Capture.JPG";
 
 
 export const projects = [
-    {
-      title: 'Y-Knot Helmets',
-      description: 'Y-Knot Helmets is a modern, stylish website designed to showcase premium helmet products with a focus on safety, performance, and design. Built with WordPress and styled using Elementor, the site offers smooth navigation and a clean, visually striking layout that highlights the brand’s collection. WooCommerce integration provides a seamless shopping experience, making it easy for customers to explore, customize, and purchase helmets online. The design balances functionality with aesthetic appeal, ensuring the website reflects the brand’s commitment to quality and innovation.',
-      techStack: ['WordPress', 'Elementor', 'WooCommerce'],
-      image: proj14,
-      link: "https://y-not.au/"
-    },
+    // {
+    //   title: 'Y-Knot Helmets',
+    //   description: 'Y-Knot Helmets is a modern, stylish website designed to showcase premium helmet products with a focus on safety, performance, and design. Built with WordPress and styled using Elementor, the site offers smooth navigation and a clean, visually striking layout that highlights the brand’s collection. WooCommerce integration provides a seamless shopping experience, making it easy for customers to explore, customize, and purchase helmets online. The design balances functionality with aesthetic appeal, ensuring the website reflects the brand’s commitment to quality and innovation.',
+    //   techStack: ['WordPress', 'Elementor', 'WooCommerce'],
+    //   image: proj14,
+    //   link: "https://y-not.au/"
+    // },
   {
     title: 'Mimosa Margaret River',
     description: 'Mimosa Margaret River is a serene and stylish retreat nestled in the heart of Western Australias wine country. This website was crafted to reflect the peaceful, luxurious experience guests can expect—highlighting the retreat’s accommodations, amenities, and breathtaking natural surroundings. Built with WordPress and styled using Elementor, the site features smooth navigation and a visually calming aesthetic, with WooCommerce integration for potential bookings or purchases.',
@@ -30,20 +30,20 @@ export const projects = [
     techStack: ['WordPress', 'Elementor', 'WooCommerce'],
     link: "https://mimosamargaretriver.com.au/"
   },
-  {
-    title: 'Drifter Cruisers',
-    description: 'This site was designed for Drifter Cruisers, a brand specializing in surf skateboards that blend street and surf culture. The website captures the essence of their laid-back, adventurous vibe while offering a seamless browsing experience. Developed on WordPress with Elementor and WooCommerce, it features an easy-to-navigate product catalog and smooth purchasing process.',
-    image: proj12,
-    techStack: ['WordPress', 'Elementor', 'WooCommerce'],
-    link: "https://driftercruisers.com/"
-  },
-  {
-    title: 'Folklore Skateboards',
-    description: 'A bold and edgy design for Folklore Skateboards, one of Australia’s iconic skateboard brands. This website puts the spotlight on their product range and skate culture identity. Built using WordPress, Elementor, and WooCommerce, it supports e-commerce capabilities and provides a highly visual, dynamic user interface tailored to skateboard enthusiasts.',
-    image: proj11,
-    techStack: ['WordPress', 'Elementor', 'WooCommerce'],
-    link: "https://folklore.com.au/"
-  },
+  // {
+  //   title: 'Drifter Cruisers',
+  //   description: 'This site was designed for Drifter Cruisers, a brand specializing in surf skateboards that blend street and surf culture. The website captures the essence of their laid-back, adventurous vibe while offering a seamless browsing experience. Developed on WordPress with Elementor and WooCommerce, it features an easy-to-navigate product catalog and smooth purchasing process.',
+  //   image: proj12,
+  //   techStack: ['WordPress', 'Elementor', 'WooCommerce'],
+  //   link: "https://driftercruisers.com/"
+  // },
+  // {
+  //   title: 'Folklore Skateboards',
+  //   description: 'A bold and edgy design for Folklore Skateboards, one of Australia’s iconic skateboard brands. This website puts the spotlight on their product range and skate culture identity. Built using WordPress, Elementor, and WooCommerce, it supports e-commerce capabilities and provides a highly visual, dynamic user interface tailored to skateboard enthusiasts.',
+  //   image: proj11,
+  //   techStack: ['WordPress', 'Elementor', 'WooCommerce'],
+  //   link: "https://folklore.com.au/"
+  // },
   {
     title: 'Project Management Tools',
     description: 'This project is a proposed and independently developed project management tool designed to streamline task organization and boost productivity. The website empowers users to efficiently manage their tasks with intuitive features that allow for adding, editing, and updating tasks seamlessly',
