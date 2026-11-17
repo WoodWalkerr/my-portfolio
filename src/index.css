@@ -1,18 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap%27');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Fira Code', monospace;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-[#f6f7fb] font-sans text-slate-800 antialiased dark:bg-ink-950 dark:text-slate-200;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    @apply bg-cyan-400/30 text-inherit;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-cyan-400 ring-offset-2 ring-offset-transparent;
+  }
 }
 
-.express-icon {
-    filter: brightness(0) invert(1);
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
   }
-  .express-icon-black {
-    filter: brightness(0) invert(0);
+  .section {
+    @apply relative py-20 sm:py-28;
   }
+
+  /* Gradient text that slowly shimmers */
+  .text-gradient {
+    @apply animate-shimmer bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  /* Card surface. No backdrop-filter on purpose: many blurred layers hurt scroll performance. */
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white/80 shadow-sm shadow-slate-900/[0.03]
+      dark:border-white/[0.08] dark:bg-white/[0.03] dark:shadow-none;
+  }
+
+  /* Mouse-following glow, driven by --mx/--my set in SpotlightCard */
+  .spotlight {
+    @apply relative isolate overflow-hidden;
+  }
+  .spotlight::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-500;
+    background: radial-gradient(
+      420px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(34, 211, 238, 0.14),
+      rgba(99, 102, 241, 0.08) 35%,
+      transparent 60%
+    );
+  }
+  .spotlight:hover::before {
+    @apply opacity-100;
+  }
+
+  .btn {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300;
+  }
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 text-white shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40;
+    background-size: 200% auto;
+  }
+  .btn-primary:hover {
+    background-position: right center;
+  }
+  .btn-ghost {
+    @apply btn border border-slate-300 text-slate-800 hover:border-slate-400 hover:bg-slate-900/5
+      dark:border-white/15 dark:text-white dark:hover:border-white/30 dark:hover:bg-white/5;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-700
+      dark:border-white/10 dark:bg-white/5 dark:text-slate-300;
+  }
+
+  .icon-btn {
+    @apply grid h-10 w-10 place-items-center rounded-full border border-slate-200 text-slate-700 transition-all duration-300
+      hover:-translate-y-0.5 hover:border-cyan-400/60 hover:text-cyan-500
+      dark:border-white/10 dark:text-slate-300 dark:hover:text-cyan-300;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition
+      focus:border-cyan-400 focus:outline-none focus:ring-4 focus:ring-cyan-400/15
+      dark:border-white/10 dark:bg-white/[0.03] dark:text-white dark:placeholder-slate-500;
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  }
+  .mask-radial {
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+  }
+}
+
+/* Honour reduced-motion: stop decorative CSS loops */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

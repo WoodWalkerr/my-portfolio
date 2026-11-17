@@ -1,10 +1,8 @@
-import cert1 from "../assets/images/1.png";
-import cert2 from "../assets/images/PGDN - Melven Bagolaque.png";
-import cert3 from "../assets/images/Website Certificate of Recognition.png";
-import cert4 from "../assets/images/StackTrek Bootcamp Certificate of Completion - Melven Bagolaque-1.png";
-import cert5 from "../assets/images/cert (1)-1.png";
-
-
+import cert1 from "../assets/media/cert-top-performer.webp";
+import cert2 from "../assets/media/cert-pgdn.webp";
+import cert3 from "../assets/media/cert-appreciation.webp";
+import cert4 from "../assets/media/cert-stacktrek.webp";
+import cert5 from "../assets/media/cert-fullstack.webp";
 
 export const certificateData = [
     {
