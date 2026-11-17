@@ -4,6 +4,7 @@ import SectionHeading from "../components/ui/SectionHeading";
 import { fadeUp, staggerParent } from "../components/ui/Reveal";
 import { FiAward, FiMaximize2, FiX } from "../components/ui/icons";
 import { certificateData } from "../data/certificates";
+import { getLenis } from "../lib/lenis";
 
 export default function Certificates() {
   const [selected, setSelected] = useState(null);
@@ -13,7 +14,9 @@ export default function Certificates() {
     const onKey = (e) => e.key === "Escape" && setSelected(null);
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+    getLenis()?.stop();
     return () => {
+      getLenis()?.start();
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
@@ -36,6 +39,7 @@ export default function Certificates() {
               <button
                 type="button"
                 onClick={() => setSelected(c)}
+                data-cursor="Open"
                 className="card spotlight group block h-full w-full p-3 text-left transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40"
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100 dark:bg-ink-800">

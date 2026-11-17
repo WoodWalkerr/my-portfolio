@@ -45,6 +45,9 @@ export default function Background() {
       {/* Grid */}
       <div className="mask-radial absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.06)_1px,transparent_1px)] bg-[size:56px_56px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.045)_1px,transparent_1px)]" />
 
+      {/* Film grain */}
+      <div className="grain absolute inset-0 opacity-[0.07] dark:opacity-[0.05]" />
+
       {/* Cursor glow */}
       <div
         ref={glowRef}

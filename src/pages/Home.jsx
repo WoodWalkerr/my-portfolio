@@ -9,6 +9,7 @@ import Certificates from "../sections/Certificates";
 import Testimonials from "../sections/Testimonials";
 import Experience from "../sections/Experience";
 import Contact from "../sections/Contact";
+import VelocityMarquee from "../components/ui/VelocityMarquee";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <VelocityMarquee items={["Web Design", "Development", "WordPress", "E-commerce", "Video Editing"]} />
         <Work />
         <About />
         <Services />
@@ -23,6 +25,7 @@ export default function Home() {
         <Certificates />
         <Testimonials />
         <Experience />
+        <VelocityMarquee items={["Let's work together", "Say hello"]} baseVelocity={2} outline className="mt-8" />
         <Contact />
       </main>
       <Footer />

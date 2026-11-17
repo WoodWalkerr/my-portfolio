@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { AnimatePresence, m } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, m, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import Magnetic from "../components/ui/Magnetic";
 import Socials from "../components/ui/Socials";
@@ -8,6 +8,8 @@ import { FiArrowDown, FiArrowUpRight } from "../components/ui/icons";
 import { projects } from "../data/projects";
 import { certificateData } from "../data/certificates";
 import { testimonials } from "../data/testimonials";
+import CountUp from "../components/ui/CountUp";
+import { INTRO_DELAY as D } from "../lib/intro";
 
 const roles = ["Full-Stack Developer", "WordPress Specialist", "Web Designer", "Video Editor"];
 
@@ -75,6 +77,11 @@ const headline = ["Let's", "create", "something"];
 export default function Hero() {
   const [lang, setLang] = useState("js");
   const role = useTypewriter(roles);
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 140]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const contentScale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
 
   // Group tokens into lines for numbered rendering
   const lines = code[lang].lines.reduce(
@@ -87,19 +94,22 @@ export default function Hero() {
   );
 
   const stats = [
-    { value: `${projects.length}+`, label: "Projects shipped" },
-    { value: certificateData.length, label: "Certificates" },
-    { value: `${testimonials.length}+`, label: "Happy clients" },
+    { value: projects.length, suffix: "+", label: "Projects shipped" },
+    { value: certificateData.length, suffix: "", label: "Certificates" },
+    { value: testimonials.length, suffix: "+", label: "Happy clients" },
   ];
 
   return (
-    <section id="home" className="relative flex min-h-[100svh] items-center pb-16 pt-32">
-      <div className="container-x grid items-center gap-14 lg:grid-cols-[1.15fr_1fr]">
+    <section id="home" ref={sectionRef} className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-32">
+      <m.div
+        style={{ y: contentY, opacity: contentOpacity, scale: contentScale }}
+        className="container-x grid items-center gap-14 lg:grid-cols-[1.15fr_1fr]"
+      >
         <div>
           <m.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: EASE }}
+            transition={{ duration: 0.6, delay: D, ease: EASE }}
             className="mb-7 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-300"
           >
             <span className="relative flex h-2 w-2">
@@ -112,7 +122,7 @@ export default function Hero() {
           <m.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
+            transition={{ duration: 0.6, delay: D + 0.1, ease: EASE }}
             className="mb-3 text-lg font-light text-slate-600 dark:text-slate-400"
           >
             Hi, I&apos;m <span className="font-semibold text-slate-900 dark:text-white">Melven Bagolaque</span> 👋
@@ -125,7 +135,7 @@ export default function Hero() {
                   className="inline-block"
                   initial={{ y: "110%" }}
                   animate={{ y: 0 }}
-                  transition={{ duration: 0.9, delay: 0.2 + i * 0.1, ease: EASE }}
+                  transition={{ duration: 0.9, delay: D + 0.2 + i * 0.1, ease: EASE }}
                 >
                   {word}
                 </m.span>
@@ -133,10 +143,10 @@ export default function Hero() {
             ))}
             <span className="inline-block overflow-hidden pb-2 align-bottom">
               <m.span
-                className="text-gradient inline-block"
+                className="text-gradient accent inline-block pr-[0.12em]"
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.9, delay: 0.5, ease: EASE }}
+                transition={{ duration: 0.9, delay: D + 0.5, ease: EASE }}
               >
                 amazing.
               </m.span>
@@ -146,7 +156,7 @@ export default function Hero() {
           <m.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
+            transition={{ delay: D + 0.9, duration: 0.6 }}
             className="mt-6 h-8 font-mono text-base text-slate-600 dark:text-slate-300 sm:text-lg"
             aria-label={roles.join(", ")}
           >
@@ -157,7 +167,7 @@ export default function Hero() {
           <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.7, ease: EASE }}
+            transition={{ delay: D + 1, duration: 0.7, ease: EASE }}
             className="mt-9 flex flex-wrap items-center gap-4"
           >
             <Magnetic>
@@ -176,7 +186,7 @@ export default function Hero() {
           <m.dl
             initial="hidden"
             animate="show"
-            variants={{ show: { transition: { staggerChildren: 0.1, delayChildren: 1.15 } } }}
+            variants={{ show: { transition: { staggerChildren: 0.1, delayChildren: D + 1.15 } } }}
             className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-slate-200 pt-8 dark:border-white/10"
           >
             {stats.map((s) => (
@@ -186,8 +196,8 @@ export default function Hero() {
                 variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}
               >
                 <dt className="text-xs text-slate-500 dark:text-slate-400">{s.label}</dt>
-                <dd className="order-first text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-                  {s.value}
+                <dd className="order-first font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                  <CountUp to={s.value} suffix={s.suffix} />
                 </dd>
               </m.div>
             ))}
@@ -198,10 +208,12 @@ export default function Hero() {
         <m.div
           initial={{ opacity: 0, y: 40, rotate: 2 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: EASE }}
+          transition={{ duration: 1, delay: D + 0.5, ease: EASE }}
           className="relative hidden sm:block"
         >
-          <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-tr from-cyan-400/20 via-blue-500/10 to-violet-500/20 opacity-80 blur-2xl" />
+          <div aria-hidden="true" className="absolute left-1/2 top-1/2 -z-10 h-[130%] w-[130%] -translate-x-1/2 -translate-y-1/2">
+            <div className="h-full w-full animate-[spin-slow_18s_linear_infinite] rounded-full bg-[conic-gradient(from_90deg,rgba(34,211,238,0.35),rgba(59,130,246,0.1),rgba(139,92,246,0.35),rgba(236,72,153,0.15),rgba(34,211,238,0.35))] opacity-70 blur-3xl dark:opacity-60" />
+          </div>
           <div className="animate-float">
             <div className="card overflow-hidden !bg-white/90 shadow-2xl shadow-blue-900/10 dark:!bg-ink-900/90 dark:shadow-black/40">
               <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3 dark:border-white/10">
@@ -287,18 +299,30 @@ export default function Hero() {
             </div>
           </div>
         </m.div>
-      </div>
+      </m.div>
 
-      <a
+      {/* Rotating circular badge */}
+      <m.a
         href="#work"
-        aria-label="Scroll to work"
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-slate-400 md:flex"
+        aria-label="Scroll to my work"
+        data-cursor="Scroll"
+        initial={{ opacity: 0, scale: 0.6 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: D + 1.3, duration: 0.8, ease: EASE }}
+        className="group absolute bottom-8 right-6 hidden h-28 w-28 place-items-center md:grid lg:right-12"
       >
-        <span className="flex h-9 w-5 justify-center rounded-full border border-slate-300 pt-1.5 dark:border-white/20">
-          <span className="h-1.5 w-1 animate-scroll-dot rounded-full bg-cyan-500" />
+        <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin-slow_14s_linear_infinite]">
+          <defs>
+            <path id="badge-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
+          </defs>
+          <text className="fill-slate-500 font-mono text-[9.5px] uppercase tracking-[0.32em] dark:fill-slate-400">
+            <textPath href="#badge-circle">Available for work • Scroll down •</textPath>
+          </text>
+        </svg>
+        <span className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-cyan-400 to-violet-500 text-white shadow-lg shadow-blue-500/30 transition-transform duration-500 group-hover:scale-110">
+          <FiArrowDown />
         </span>
-        <FiArrowDown className="sr-only" />
-      </a>
+      </m.a>
     </section>
   );
 }

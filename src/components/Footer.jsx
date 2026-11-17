@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-x">
         <div className="flex flex-col justify-between gap-10 md:flex-row md:items-start">
           <div>
-            <p className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            <p className="font-display text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
               MELVEN<span className="text-cyan-500">.</span>
             </p>
             <p className="mt-2 max-w-xs text-sm text-slate-500 dark:text-slate-400">
@@ -48,7 +48,7 @@ export default function Footer() {
       {/* Giant outlined wordmark */}
       <p
         aria-hidden="true"
-        className="pointer-events-none -mb-[0.22em] select-none text-center text-[22vw] font-extrabold leading-none tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(100,116,139,0.25)]"
+        className="pointer-events-none -mb-[0.22em] select-none text-center font-display text-[22vw] font-extrabold leading-none tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(100,116,139,0.25)]"
       >
         MELVEN
       </p>

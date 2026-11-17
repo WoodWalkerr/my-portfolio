@@ -4,6 +4,7 @@ import { links } from "../data/navbar";
 import ThemeToggle from "./ui/ThemeToggle";
 import Socials from "./ui/Socials";
 import { FiMenu, FiX } from "./ui/icons";
+import { INTRO_DELAY } from "../lib/intro";
 
 /** Tracks which section is currently in the middle of the viewport. */
 function useActiveSection(ids) {
@@ -48,14 +49,14 @@ export default function Navbar() {
       <m.nav
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.7, delay: INTRO_DELAY + 0.3, ease: [0.22, 1, 0.36, 1] }}
         className={`mx-auto flex max-w-6xl items-center justify-between rounded-full border px-3 py-2 transition-all duration-500 sm:px-4 ${
           scrolled
             ? "border-slate-200/80 bg-white/75 shadow-lg shadow-slate-900/5 backdrop-blur-xl dark:border-white/10 dark:bg-ink-900/70 dark:shadow-black/30"
             : "border-transparent bg-transparent"
         }`}
       >
-        <a href="#home" className="group flex items-center gap-2 pl-2 text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
+        <a href="#home" className="group flex items-center gap-2 pl-2 font-display text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
           <span className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-cyan-400 to-violet-500 text-sm text-white transition-transform duration-500 group-hover:rotate-[360deg]">
             M
           </span>
@@ -125,7 +126,7 @@ export default function Navbar() {
                   <a
                     href={`#${id}`}
                     onClick={() => setOpen(false)}
-                    className="flex items-baseline gap-4 py-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-white"
+                    className="flex items-baseline gap-4 py-2 font-display text-4xl font-bold tracking-tight text-slate-900 dark:text-white"
                   >
                     <span className="font-mono text-xs text-cyan-500">0{i + 1}</span>
                     {label}

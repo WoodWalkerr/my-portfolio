@@ -5,8 +5,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
-        mono: ['"Fira Code"', "ui-monospace", "SFMono-Regular", "monospace"],
+        sans: ['"Geist Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ['"Bricolage Grotesque Variable"', '"Geist Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ['"Instrument Serif"', "ui-serif", "Georgia", "serif"],
+        mono: ['"Geist Mono Variable"', "ui-monospace", "SFMono-Regular", "monospace"],
       },
       colors: {
         ink: {

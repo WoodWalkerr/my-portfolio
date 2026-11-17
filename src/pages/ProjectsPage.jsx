@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import { EASE } from "../components/ui/Reveal";
 import { FiArrowLeft } from "../components/ui/icons";
 import { projects } from "../data/projects";
+import { getLenis } from "../lib/lenis";
 
 const CMS = ["WordPress", "Wix", "Squarespace", "Namesco", "Elementor"];
 const filters = [
@@ -20,7 +21,9 @@ export default function ProjectsPage() {
   const shown = useMemo(() => projects.filter(filters.find((f) => f.key === filter).test), [filter]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const lenis = getLenis();
+    if (lenis) lenis.scrollTo(0, { immediate: true, force: true });
+    else window.scrollTo(0, 0);
     document.title = "Projects — Melven Bagolaque";
     return () => {
       document.title = "Melven Bagolaque — Full-Stack Developer & Web Designer";
@@ -51,7 +54,7 @@ export default function ProjectsPage() {
             animate={{ y: 0 }}
             transition={{ duration: 0.9, ease: EASE }}
           >
-            All <span className="text-gradient">projects</span>
+            All <span className="text-gradient accent">projects</span>
           </m.span>
         </h1>
 

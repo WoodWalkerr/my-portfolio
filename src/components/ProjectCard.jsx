@@ -31,6 +31,7 @@ export default function ProjectCard({ project, priority = false }) {
       rel="noreferrer"
       onPointerMove={onMove}
       onPointerLeave={onLeave}
+      data-cursor="View"
       style={{ rotateX, rotateY, transformPerspective: 1000 }}
       className="card spotlight group flex h-full flex-col p-3 transition-colors duration-300 hover:border-cyan-400/40"
     >

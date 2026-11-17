@@ -20,7 +20,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <m.figure key={t.name} variants={fadeUp} className="h-full">
               <SpotlightCard className="flex h-full flex-col p-7 transition-transform duration-500 hover:-translate-y-1">
-                <span aria-hidden="true" className="text-gradient font-serif text-6xl leading-none">
+                <span aria-hidden="true" className="text-gradient font-serif text-7xl leading-none">
                   &ldquo;
                 </span>
                 <blockquote className="mt-2 flex-1 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">

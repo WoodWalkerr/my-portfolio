@@ -46,7 +46,7 @@ export default function Contact() {
               </Reveal>
               <Reveal delay={0.08}>
                 <h2 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl">
-                  Let&apos;s work <span className="text-gradient">together.</span>
+                  Let&apos;s work <span className="text-gradient accent">together.</span>
                 </h2>
               </Reveal>
               <Reveal delay={0.16}>
